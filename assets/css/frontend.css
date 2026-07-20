@@ -1,0 +1,644 @@
+/**
+ * Frontend Styles
+ *
+ * Flipnzee Site Inventory
+ *
+ * Lightweight responsive styles for inventory profile cards.
+ *
+ * @package FlipnzeeSiteInventory
+ */
+
+/* --------------------------------------------------------------
+   Container
+-------------------------------------------------------------- */
+
+.flipnzee-site-inventory {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: #ffffff;
+    border: 1px solid #e4e4e4;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------
+   Header
+-------------------------------------------------------------- */
+
+.fsi-card-header {
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg,#f8fafc,#eef3f8);
+    border-bottom: 1px solid #ececec;
+}
+
+.fsi-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.fsi-url {
+    margin-top: .75rem;
+    font-size: .95rem;
+    word-break: break-word;
+}
+
+.fsi-url a {
+    color: #2271b1;
+    text-decoration: none;
+}
+
+.fsi-url a:hover {
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------
+   Sections
+-------------------------------------------------------------- */
+
+.fsi-section {
+    padding: 1.75rem 2rem;
+    border-bottom: 1px solid #efefef;
+}
+
+.fsi-section:last-of-type {
+    border-bottom: none;
+}
+
+.fsi-section h3 {
+    margin: 0 0 1rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------
+   Tables
+-------------------------------------------------------------- */
+
+.fsi-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fsi-table tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.fsi-table th,
+.fsi-table td {
+    padding: .85rem 1rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.fsi-table th {
+    width: 35%;
+    font-weight: 600;
+}
+
+.fsi-table td{
+
+    word-break:normal;
+
+    overflow-wrap:anywhere;
+
+}
+
+/* --------------------------------------------------------------
+   Footer
+-------------------------------------------------------------- */
+
+.fsi-card-footer {
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: .85rem;
+    color: #666;
+    background: #fafafa;
+    border-top: 1px solid #ececec;
+}
+
+/* --------------------------------------------------------------
+   Notices
+-------------------------------------------------------------- */
+
+.flipnzee-site-inventory-notice {
+    margin: 2rem auto;
+    max-width: 900px;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #d63638;
+    background: #fcf0f1;
+    color: #6d2323;
+    border-radius: 6px;
+}
+
+/* --------------------------------------------------------------
+   Utility
+-------------------------------------------------------------- */
+
+.fsi-table td:empty::before {
+    content: "Unavailable";
+    color: #777;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------------
+   Responsive
+-------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .flipnzee-site-inventory {
+        margin: 1rem;
+        border-radius: 10px;
+    }
+
+    .fsi-card-header,
+    .fsi-section,
+    .fsi-card-footer {
+        padding: 1.25rem;
+    }
+
+    .fsi-title {
+        font-size: 1.6rem;
+    }
+
+    .fsi-table,
+    .fsi-table tbody,
+    .fsi-table tr,
+    .fsi-table th,
+    .fsi-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .fsi-table tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ececec;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .fsi-table th {
+        background: #f7f7f7;
+        border-bottom: 1px solid #ececec;
+    }
+
+    .fsi-table th,
+    .fsi-table td {
+        padding: .8rem 1rem;
+    }
+
+}
+
+/* --------------------------------------------------------------
+   Dark Mode
+-------------------------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+
+    .flipnzee-site-inventory {
+        background: #1d2327;
+        color: #f0f0f0;
+        border-color: #3c434a;
+        box-shadow: 0 10px 30px rgba(0,0,0,.45);
+    }
+
+    .fsi-card-header {
+        background: linear-gradient(135deg,#242b31,#2c3338);
+        border-color: #3c434a;
+    }
+
+    .fsi-section {
+        border-color: #3c434a;
+    }
+
+    .fsi-section h3 {
+        color: #ffffff;
+    }
+
+    .fsi-table tr:nth-child(even) {
+        background: rgba(255,255,255,.03);
+    }
+
+    .fsi-table th {
+        color: #ffffff;
+    }
+
+    .fsi-card-footer {
+        background: #242b31;
+        color: #bfbfbf;
+        border-color: #3c434a;
+    }
+
+    .fsi-url a {
+        color: #72aee6;
+    }
+
+    .flipnzee-site-inventory-notice {
+        background: rgba(214,54,56,.18);
+        color: #ffd4d4;
+        border-left-color: #ff8080;
+    }
+
+}
+
+/* ==========================================================
+   Modern Card Layout (v1.2)
+========================================================== */
+
+.fsi-hero{
+
+    display:flex;
+    align-items:center;
+    gap:24px;
+
+    padding:24px;
+
+    background:linear-gradient(135deg,#f5f9ff,#edf5ff);
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.fsi-hero-icon{
+
+    font-size:40px;
+
+    flex:0 0 auto;
+
+}
+
+.fsi-hero-content{
+
+    flex:1;
+
+}
+
+.fsi-hero-content h1{
+
+    margin:0;
+
+    font-size:2.25rem;
+
+    line-height:1.2;
+
+    font-weight:700;
+
+}
+
+.fsi-description{
+
+    margin-top:14px;
+
+    color:#666;
+
+}
+
+/* ==========================================================
+   Cards Layout (Flexbox)
+========================================================== */
+
+/* ==========================================================
+   Adaptive Card Layout
+========================================================== */
+
+.fsi-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+
+    gap:24px;
+
+    padding:30px;
+
+}}
+.fsi-card{
+
+    background:#ffffff;
+
+    border:1px solid #e8e8e8;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.05);
+
+    transition:all .25s ease;
+
+}
+.fsi-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.fsi-card-title{
+
+    padding:18px 22px;
+
+    background:#f7f9fc;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.fsi-card-title h3{
+
+    margin:0;
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+}
+
+.fsi-card-body{
+
+    padding:10px 22px;
+
+}
+
+.fsi-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #f0f0f0;
+
+}
+.fsi-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.fsi-item-label{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#666;
+
+}
+.fsi-item-value{
+
+    font-size:16px;
+
+    color:#222;
+
+    overflow-wrap:anywhere;
+
+}
+.fsi-card-footer{
+
+    padding:20px;
+
+    text-align:center;
+
+    border-top:1px solid #ececec;
+
+    background:#fafafa;
+
+    color:#777;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    @media (max-width:768px){
+
+    .fsi-grid{
+
+        display:block;
+
+        padding:20px;
+
+    }
+
+    .fsi-hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .fsi-item{
+
+        flex-direction:column;
+
+        gap:6px;
+
+    }
+
+    .fsi-item-value{
+
+        text-align:left;
+
+    }
+
+}
+    .fsi-hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .fsi-item{
+
+        flex-direction:column;
+
+        gap:6px;
+
+    }
+
+    .fsi-item-value{
+
+        text-align:left;
+
+    }
+
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width:768px){
+
+    .fsi-grid{
+
+        grid-template-columns:1fr;
+
+        padding:20px;
+
+    }
+
+    .fsi-hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .fsi-item{
+
+        flex-direction:column;
+
+        gap:6px;
+
+    }
+
+    .fsi-item-value{
+
+        text-align:left;
+
+    }
+
+}
+
+/* ==========================================================
+   Portfolio Inventory Dashboard
+========================================================== */
+
+.fsi-portfolio{
+    max-width:1400px;
+    margin:40px auto;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 24px rgba(0,0,0,.06);
+}
+
+.fsi-summary-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+.fsi-summary-card{
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    border-radius:10px;
+    padding:20px;
+    text-align:center;
+}
+
+.fsi-summary-number{
+    font-size:34px;
+    font-weight:700;
+    color:#2271b1;
+    margin-bottom:10px;
+}
+
+.fsi-summary-label{
+    color:#666;
+    font-size:15px;
+}
+
+.fsi-table-wrapper{
+    padding:0 30px 30px;
+    overflow-x:auto;
+}
+
+.fsi-portfolio-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.fsi-portfolio-table th{
+    background:#f6f7f7;
+    padding:14px;
+    text-align:left;
+    border-bottom:2px solid #ddd;
+}
+
+.fsi-portfolio-table td{
+    padding:14px;
+    border-bottom:1px solid #eee;
+}
+
+.fsi-portfolio-table tbody tr:hover{
+    background:#fafafa;
+}
+
+.fsi-status{
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.fsi-online{
+    background:#d1fae5;
+    color:#166534;
+}
+
+.fsi-offline{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
+@media (max-width:768px){
+
+    .fsi-summary-grid{
+        grid-template-columns:repeat(2,1fr);
+        padding:20px;
+    }
+
+    .fsi-table-wrapper{
+        padding:15px;
+    }
+
+}
+
+.fsi-portfolio-table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:auto;
+}
+
+.fsi-portfolio-table th,
+.fsi-portfolio-table td{
+    padding:12px 16px;
+    text-align:left;
+    vertical-align:top;
+    white-space:nowrap;
+}
+
+.fsi-portfolio-table th{
+    font-weight:600;
+    background:#f7f7f7;
+    border-bottom:2px solid #ddd;
+}
+
+.fsi-portfolio-table td{
+    border-bottom:1px solid #eee;
+}
+
+.fsi-table-wrapper{
+    overflow-x:auto;
+}

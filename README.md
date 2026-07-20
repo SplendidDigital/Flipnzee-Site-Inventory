@@ -105,3 +105,29 @@ Contributions, suggestions, and bug reports are welcome.
 ## License
 
 GPL-2.0-or-later
+
+## Portfolio Inventory
+
+Display cumulative inventory across multiple WordPress websites.
+
+### Shortcode
+
+```text
+[flipnzee_portfolio_inventory]
+```
+
+### Features
+
+- Displays connected websites
+- Online and offline status
+- Total posts
+- Total pages
+- Total media
+- Total categories
+- Total users
+- WordPress version
+- PHP version
+- Active theme
+- Last published date
+
+The shortcode aggregates inventory by connecting to the REST endpoint of every website configured in the Portfolio Sites settings.
